@@ -1,9 +1,23 @@
 function isPalindrome(word) {
-  // Write your algorithm here
+  let backWards = []
+  let wordArr = word.split('')
+  for (let i = 0; i < wordArr.length; i++) {
+    backWards.unshift(wordArr[i]);
+  }
+  const backWardsStr = backWards.toString()
+  const wordArrStr = wordArr.toString()
+  if (backWardsStr === wordArrStr) {
+    return true;
+  }
+  return false;
 }
 
 /* 
   Add your pseudocode here
+iterate through word backwards
+add to array 
+if matches 
+return true else false
 */
 
 /*
